@@ -25,8 +25,16 @@ class Task3Activity : AppCompatActivity() {
 
         val receiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
-                binding.actionTV.setText(intent?.action)
-                Toast.makeText(context, intent?.action, Toast.LENGTH_LONG).show()
+                if(intent?.action == Intent.ACTION_POWER_CONNECTED)
+                {
+                    binding.actionTV.setText(intent?.action)
+                    Toast.makeText(context, "Charger Connected", Toast.LENGTH_SHORT).show()
+                }
+                else if(intent?.action == Intent.ACTION_POWER_DISCONNECTED)
+                {
+                    binding.actionTV.setText(intent?.action)
+                    Toast.makeText(context, "Charger Disconnected", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         registerReceiver(receiver, filter)
