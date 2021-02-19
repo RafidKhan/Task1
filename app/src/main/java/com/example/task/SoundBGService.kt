@@ -10,15 +10,10 @@ import android.os.SystemClock
 import android.util.Log
 import android.widget.Toast
 
-class SoundBGService : Service(){
+class SoundBGService : Service() {
 
     private var mediaPlayer2: MediaPlayer? = null
 
-    override fun onCreate() {
-        super.onCreate()
-
-
-    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         playSound()

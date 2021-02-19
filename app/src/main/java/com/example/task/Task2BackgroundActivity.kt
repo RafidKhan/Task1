@@ -10,8 +10,6 @@ import com.example.task.databinding.ActivityTask3Binding
 
 class Task2BackgroundActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

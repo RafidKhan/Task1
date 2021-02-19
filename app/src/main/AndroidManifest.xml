@@ -20,6 +20,8 @@
             android:enabled="true"
             android:exported="true" />
 
+        <service android:name=".SoundBGService" />
+
         <activity android:name=".Task3Activity" />
         <activity android:name=".Task2Activity" />
         <activity android:name=".Task1Activity" />
@@ -30,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
 
     </application>
