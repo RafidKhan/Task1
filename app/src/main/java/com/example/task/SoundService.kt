@@ -21,7 +21,7 @@ class SoundService : Service() {
         return START_STICKY
     }
 
-    fun playSound() {
+   private fun playSound() {
         mediaPlayer = MediaPlayer.create(this, R.raw.deargod)
         mediaPlayer!!.start()
     }

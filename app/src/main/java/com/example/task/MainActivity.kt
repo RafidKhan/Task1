@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.task2btn.setOnClickListener()
         {
-            intent = Intent(applicationContext, Task2Activity::class.java)
+            intent = Intent(applicationContext, Task2BaseActivity::class.java)
             startActivity(intent)
         }
 
