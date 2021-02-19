@@ -17,17 +17,14 @@ class SoundBGService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         playSound()
-        Log.d("funplay", "from service play")
         return START_STICKY
     }
-
 
     override fun onDestroy() {
         super.onDestroy()
         pauseSound()
         Log.d("funplay", "from service pause")
     }
-
 
     private fun playSound() {
         mediaPlayer2 = MediaPlayer.create(this, R.raw.deargod2)
@@ -40,9 +37,7 @@ class SoundBGService : Service() {
         Log.d("funsound", "PuaseFun")
     }
 
-
     override fun onBind(intent: Intent?): IBinder? {
         return null
     }
-
 }
