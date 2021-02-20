@@ -21,12 +21,10 @@ class Task2BackgroundActivity : AppCompatActivity() {
         binding.btnPlay.setOnClickListener()
         {
             startService(intent)
-            //Log.d("funplay", "from class play")
         }
         binding.btnPause.setOnClickListener()
         {
             stopService(intent)
-            //Log.d("funplay", "from class pause")
         }
     }
 }

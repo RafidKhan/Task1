@@ -5,6 +5,7 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.IBinder
+import android.util.Log
 import androidx.annotation.RequiresApi
 
 class SoundService : Service() {
@@ -15,17 +16,18 @@ class SoundService : Service() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForeground()
-
         }
-
         return START_STICKY
     }
 
-   private fun playSound() {
+    private fun playSound() {
         mediaPlayer = MediaPlayer.create(this, R.raw.deargod)
         mediaPlayer!!.start()
     }
 
+    private fun pauseSound() {
+        mediaPlayer!!.pause()
+    }
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -52,15 +54,13 @@ class SoundService : Service() {
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentIntent(pendingIntent)
             .build()
-
         startForeground(1, notification)
-
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        pauseSound()
     }
-
 
     override fun onBind(intent: Intent): IBinder? {
         return null
