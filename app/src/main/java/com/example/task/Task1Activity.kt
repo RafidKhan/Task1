@@ -51,16 +51,12 @@ class Task1Activity : AppCompatActivity() {
 
         var call = API.getMovieData()
 
-
-
-
         call?.enqueue(object : Callback<MovieResponse?> {
             override fun onResponse(
 
                 call: Call<MovieResponse?>,
                 response: Response<MovieResponse?>
             ) {
-
 
                 var movieList = response
                 var adapterImage: ImageAdapter =
@@ -70,17 +66,11 @@ class Task1Activity : AppCompatActivity() {
                 binding.recyclerView.layoutManager = LinearLayoutManager(applicationContext)
                 binding.recyclerView.adapter = adapterImage
                 binding.recyclerView.adapter?.notifyDataSetChanged()
-
-
             }
-
 
             override fun onFailure(call: Call<MovieResponse?>, t: Throwable) {
                 Log.d("OnResponse", t.message.toString())
             }
-
         })
-
     }
-
 }
