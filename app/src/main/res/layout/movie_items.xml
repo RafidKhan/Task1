@@ -4,43 +4,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="200dp">
 
     <TextView
-        android:id="@+id/nameTV"
+        android:id="@+id/itemnameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name: "
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toEndOf="@+id/posterIV"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemposterIV"
+        app:layout_constraintVertical_bias="0.059" />
 
     <TextView
-        android:id="@+id/ratingTV"
+        android:id="@+id/itemratingTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rating: "
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toEndOf="@+id/posterIV"
-        app:layout_constraintTop_toBottomOf="@+id/nameTV"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemnameTV"
+        app:layout_constraintVertical_bias="0.055" />
 
     <ImageView
-        android:id="@+id/posterIV"
+        android:id="@+id/itemposterIV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.048"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/itemoverviewTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overview: "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemratingTV"
+        app:layout_constraintVertical_bias="0.065" />
 </androidx.constraintlayout.widget.ConstraintLayout>
